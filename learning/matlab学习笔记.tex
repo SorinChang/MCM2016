@@ -1,0 +1,57 @@
+\documentclass[a4paper,onesides,CJK,11pt]{cctart}
+\usepackage{amsmath}
+\usepackage{cases}
+\headsep 0.5 true cm \topmargin 0pt \oddsidemargin 0pt
+\evensidemargin 0pt \textheight 225mm \textwidth 165mm
+\usepackage{pifont}
+\usepackage{mathrsfs}
+\usepackage{slashbox}
+\usepackage{amsfonts}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage{fancyhdr}
+\usepackage{CCT}
+\usepackage{color}
+\usepackage{picins}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath,amsfonts,amsthm}
+\usepackage{epsfig,longtable}
+\usepackage[tight,hang]{subfigure}
+%\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{bbding}
+\usepackage{fancybox}
+\usepackage{indentfirst}
+\newcommand{\ud}{\mathrm{d}}
+%\theoremstyle{plain}\newtheorem{定理}{Theorem}
+\setlength{\parindent}{2em}
+%\newtheoremstyle{mystyle}{3pt}{3pt}{\itshape}{\parindent}{\bfseries}{}{5mm}{}
+%\theoremstyle{mystyle} \newtheorem{Thm}{定理}
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\setcounter{section}{1}
+\begin{document}
+	\begin{center}
+		\textbf{MCM-Matlab学习笔记}
+	\end{center}
+\begin{abstract}
+	针对于建模的matlab学习笔记，及Latex学习。
+\end{abstract}
+\section*{1	线性规划}
+\subsection{原型}
+  Matlab中线性规划的标准型：
+\begin{equation*}
+	min c^Tx
+	\left\{
+	\begin{array}{rr}		%left\{开始中括号,array矩阵表达
+		Ax \leq b	\\
+		Aeq \cdot cx=beq	\\%注意点乘
+		lb\leq x \leq ub
+	\end{array}
+	\right.				    %\right\}补全右括号,.表示无右括号，结束括号范围
+\end{equation*}
+	基本函数形式为 linprog(c,A,b)
+\end{document}
